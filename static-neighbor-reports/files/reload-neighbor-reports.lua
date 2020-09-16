@@ -12,7 +12,7 @@ function hasKey(tab, key)
 	return false
 end
 
-uci:foreach('fixed-neighbor-report', 'neighbor', function (config)
+uci:foreach('static-neighbor-report', 'neighbor', function (config)
 	if hasKey(config, "disabled") and config.disabled ~= '0' then
 		return
 	end
