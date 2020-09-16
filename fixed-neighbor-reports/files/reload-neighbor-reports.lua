@@ -13,7 +13,7 @@ function hasKey(tab, key)
 end
 
 uci:foreach('fixed-neighbor-report', 'neighbor', function (config)
-	if hasKey(config, "disabled") and config.disabled != '0' then
+	if hasKey(config, "disabled") and config.disabled ~= '0' then
 		return
 	end
 
