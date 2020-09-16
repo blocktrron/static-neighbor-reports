@@ -20,7 +20,7 @@ endef
 define Package/static-neighbor-reports
   SECTION:=net
   CATEGORY:=Network
-  TITLE:=Integration for hostapd fixed neighbor reports
+  TITLE:=Allows to configure static neighbor reports for hostapd
   PKGARCH:=all
   DEPENDS:=+libuci-lua +lua +libubus-lua
 endef
@@ -39,7 +39,7 @@ define Package/static-neighbor-reports/conffiles
 endef
 
 define Package/static-neighbor-reports/description
-  Allows to configure neighbor reports for hostapd interfaces.
+  Allows to configure static neighbor reports for hostapd interfaces.
 
   These neighbor reports are avilable to clients using IEEE 802.11k.
 endef
