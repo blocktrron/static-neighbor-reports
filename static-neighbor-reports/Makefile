@@ -20,7 +20,7 @@ endef
 define Package/static-neighbor-reports
   SECTION:=net
   CATEGORY:=Network
-  TITLE:=Allows to configure static neighbor reports for hostapd
+  TITLE:=Configure static 802.11k neighbor reports
   PKGARCH:=all
   DEPENDS:=+libuci-lua +lua +libubus-lua
 endef
