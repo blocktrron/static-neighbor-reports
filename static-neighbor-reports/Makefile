@@ -30,6 +30,8 @@ define Package/static-neighbor-reports/install
 	$(INSTALL_CONF) ./files/static-neighbor-report.conf $(1)/etc/config/static-neighbor-report
 	$(INSTALL_DIR) $(1)/etc/hotplug.d/net
 	$(INSTALL_DATA) ./files/reload-neighbor-reports.hotplug $(1)/etc/hotplug.d/net/reload-neighbor-reports
+	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_BIN) ./files/static-neighbor-reports.init $(1)/etc/init.d/static-neighbor-reports
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) ./files/reload-neighbor-reports.lua $(1)/usr/bin/reload-neighbor-reports
 endef
