@@ -20,7 +20,6 @@ reload_service() {
 	start
 }
 
-service_triggers()
-{
+service_triggers() {
 	procd_add_raw_trigger "hostapd.*" 3000 /etc/init.d/static-neighbor-reports restart
 }
