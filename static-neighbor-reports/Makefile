@@ -7,7 +7,7 @@ PKG_NAME:=static-neighbor-reports
 PKG_VERSION:=1
 PKG_RELEASE:=1
 
-PKG_MAINTAINER:=David Bauer <mail@david-bauer.net
+PKG_MAINTAINER:=David Bauer <mail@david-bauer.net>
 PKG_LICENSE:=GPL-2.0
 
 include $(INCLUDE_DIR)/package.mk
