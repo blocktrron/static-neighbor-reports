@@ -17,11 +17,18 @@ uci:foreach('static-neighbor-report', 'neighbor', function (config)
 		return
 	end
 
+	bssid = ''
+	ssid = ''
+	neighbor_report = config['neighbor_report']
+
+	if hasKey(config, 'bssid') then bssid = config.bssid end
+	if hasKey(config, 'ssid') then ssid = config.ssid end
+
 	for iface in config.iface:gmatch("%S+") do
 		if not hasKey(neighbor_reports, iface) then
 			neighbor_reports[iface] = {}
 		end
-		table.insert(neighbor_reports[iface], {config["bssid"], config["ssid"], config["neighbor_report"]})
+		table.insert(neighbor_reports[iface], {bssid, ssid, neighbor_report})
 	end
 end)
 
