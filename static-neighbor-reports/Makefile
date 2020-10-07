@@ -31,7 +31,7 @@ define Package/static-neighbor-reports/install
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_BIN) ./files/static-neighbor-reports.init $(1)/etc/init.d/static-neighbor-reports
 	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) ./files/reload-neighbor-reports.lua $(1)/usr/bin/reload-neighbor-reports
+	$(INSTALL_BIN) ./files/reload-neighbor-reports.lua $(1)/usr/lib/reload-neighbor-reports.lua
 endef
 
 define Package/static-neighbor-reports/conffiles
